@@ -1,9 +1,10 @@
-const spareShotProbability = prompt("spare shot probability?", 0.2)
-const magazineSize = 10
-const testRuns = 10000000
-const effectiveMagazineSize = calculateEffectiveMagazineSize(spareShotProbability, magazineSize, testRuns)
-console.log(effectiveMagazineSize)
-
+function runCode() {
+    const magazineSize = document.getElementById("magazineSize").value
+    const spareShotProbability = document.getElementById("spareShotProbability").value
+    const testRuns = document.getElementById("testRuns").value
+    const effectiveMagazineSize = calculateEffectiveMagazineSize(spareShotProbability, magazineSize, testRuns)
+    document.getElementById("result").innerHTML = effectiveMagazineSize
+}
 function calculateEffectiveMagazineSize(spareShotProbability, magazineSize, testRuns) {
     let totalShotsFired = 0
     for (let i = 1; i <= testRuns; i++) {

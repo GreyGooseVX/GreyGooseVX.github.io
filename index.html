@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>spare shot calculator</title>
-	<meta charset="UTF-8">
+    <title>spare shot calculator</title>
+    <meta charset="UTF-8">
+    <script src=spareShotCalculator.js></script>
 </head>
+
 <body>
-	<h1>
-		monster hunter world <br>
-		spare shot calculator
-	</h1>
-	<img src="mhw.jpg" alt="unable to load image" width="70%">
-<script src=spareShotCalculator.js></script>
+    <header>
+        <h1>monster hunter world <br>
+            spare shot calculator</h1>
+    </header>
+    <form>
+        <div>
+            <label>magazineSize:</label>
+            <input type="text" id="magazineSize" value=10>
+        </div>
+        <div>
+            <label>spareShotProbability:</label>
+            <input type="text" id="spareShotProbability" value=0.2>
+        </div>
+        <div>
+            <label>testRuns:</label>
+            <input type="text" id="testRuns" value=100000>
+        </div>
+        <button type="button" onclick="runCode()">calculate</button>
+    </form>
+    <p id=result></p>
 </body>
+
 </html>
