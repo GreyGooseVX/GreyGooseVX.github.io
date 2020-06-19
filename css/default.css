@@ -1,0 +1,38 @@
+body {
+    color: black;
+    background-color: DarkSlateGray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: DarkGrey;
+    width: 80%;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    font-size: 2vw;
+}
+
+label {}
+
+input {
+    text-align: center;
+    font-size: 2vw;
+}
+
+button {
+    font-size: 2vw;
+}
+
+ul {
+    text-align: left;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: BlanchedAlmond;
+}
