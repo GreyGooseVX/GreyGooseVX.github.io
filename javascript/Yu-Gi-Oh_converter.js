@@ -1,13 +1,17 @@
 function convertButton() {
 	let ydk = document.getElementById("ydk").value
 	const confHeaders = "#[2SneakCardPool]\n!2SneakCardPool\n$whitelist\n"
-	ydk = ydk.replace(/#main\n|#extra\n|!side\n/gi, "")
+	ydk = ydk.replace(/#main|#extra|!side/gi, "")
+	ydk = ydk.replace(/(^[ \t]*\n)/gm, "")
+	ydk = ydk.trim()
 	let cardpoolArray = ydk.split("\n")
 	let cardpoolMap = new Map()
 	let convertedYdk = ""
 	cardpoolArray.forEach(convert)
 	cardpoolMap.forEach(logMap)
-	const conf = confHeaders + convertedYdk
+	let conf = confHeaders + convertedYdk
+	//const conf = ydk
+	conf = conf.trim()
 	document.getElementById("conf").innerHTML = conf
 
 	function convert(currentCard) {
@@ -22,6 +26,5 @@ function convertButton() {
 
 	function logMap(value, key) {
 		convertedYdk += key + " " + value + "\n"
-		convertedYdk
 	}
 }
