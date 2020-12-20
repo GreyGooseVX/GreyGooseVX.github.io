@@ -1,0 +1,11 @@
+.jumbotron {
+	height: 90vh;
+	float: left;
+}
+.outerContainer {
+	width: 30%;
+}
+
+.centerContainer {
+	width: 40%;
+}
