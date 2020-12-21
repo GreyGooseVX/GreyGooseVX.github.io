@@ -33,5 +33,5 @@ function convertListToKeyValuePair(currentCard) {
 	}
 }
 function writeKeyValuePairToTextarea(value, key) {
-	convertedYdk += key + " " + value + "\n"
+	convertedYdk += key + " " + value + " cards" + "\n"
 }
