@@ -14,6 +14,10 @@ function sneakPeekConverterButton() {
 	let conf = sneakConfHeaders + convertedYdk
 	conf = conf.trim()
 	document.getElementById("sneakConf").innerHTML = conf
+
+	var data = new Blob([conf], { type: "text/conf" })
+	var url = window.URL.createObjectURL(data)
+	document.getElementById("download_link_sneak").href = url
 }
 function bannedListConverterButton() {
 	let googleSpreadsheetsBannedList = document.getElementById("googleSpreadsheetsBannedList").value
@@ -22,6 +26,10 @@ function bannedListConverterButton() {
 	let conf = preXYZConfHeaders + googleSpreadsheetsBannedList
 	conf = conf.trim()
 	document.getElementById("bannedListConf").innerHTML = conf
+
+	var data = new Blob([conf], { type: "text/conf" })
+	var url = window.URL.createObjectURL(data)
+	document.getElementById("download_link_banned_list").href = url
 }
 function convertListToKeyValuePair(currentCard) {
 	if (cardpoolMap.has(currentCard) == true) {
