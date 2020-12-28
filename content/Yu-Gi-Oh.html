@@ -1,70 +1,93 @@
 <link rel="stylesheet" href="/css/Yu-Gi-Oh.css" />
-<div class="jumbotron outerContainer">
-	<h1>sneak peek converter</h1>
-	<div class="form-group">
-		<label>.ydk</label>
-		<textarea class="form-control" id="ydk" rows="6"></textarea>
+<div class="container-fluid">
+	<div class="row">
+		<div class="jumbotron col">
+			<h1>sneak peek converter</h1>
+			<div class="form-group">
+				<label>.ydk</label>
+				<textarea class="form-control" id="ydk" rows="6"></textarea>
+			</div>
+			<button type="button" class="btn btn-success" onclick="sneakPeekConverterButton()">convert</button>
+			<a id="download_link_sneak" class="btn btn-success" download="2SneakCardPool.conf" href=""
+				>download as .conf file</a
+			>
+			<div class="form-group">
+				<label>.conf</label>
+				<textarea class="form-control" id="sneakConf" rows="6"></textarea>
+			</div>
+			<p>
+				store the .conf here: <br />
+				<b>C:\ProjectIgnis\repositories\lflists</b>
+			</p>
+		</div>
+		<div class="jumbotron col">
+			<img src="/images/YuGiOh_Logo1.png" class="img-fluid" alt="image could not be loaded" />
+			<h1>important links</h1>
+			<ul>
+				<h3>
+					<li>
+						<a
+							target="_blank"
+							href="https://docs.google.com/spreadsheets/d/1NCD4u_KRdl6T0fOKFnFGOmMbWwV9U_HEFP6O4gS5jf8/edit#gid=1201840031"
+							>banned lists</a
+						>
+					</li>
+					<li>
+						<a target="_blank" href="https://discord.com/invite/ygopro-percy"
+							>deck builder and duel emulator (project ignis)</a
+						>
+					</li>
+					<li>
+						<a target="_blank" href="https://db.ygoprodeck.com/pack-open/">booster pack simulator (ygoprodeck)</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://tsunamimats.com/pages/proxy"
+							>proxy image generator (tsunami mats)<br />5.96 x 8.61</a
+						>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/Dejauxvue/YGOProxyGenerator"
+							>proxy .pdf generator (YGOProxyGenerator)<br />1,04 scale for DM printer - 30 margin</a
+						>
+					</li>
+					<li>
+						<a target="_blank" href="https://yugioh.fandom.com/wiki/Order_of_Set_Release#TCG"
+							>sneak peek release order</a
+						>
+					</li>
+				</h3>
+			</ul>
+		</div>
+		<div class="jumbotron col">
+			<h1>banned list converter</h1>
+			<div class="form-group">
+				<label>google spreadsheets</label>
+				<textarea class="form-control" id="googleSpreadsheetsBannedList" rows="6"></textarea>
+			</div>
+			<button type="button" class="btn btn-success" onclick="bannedListConverterButton()">convert</button>
+			<a id="download_link_banned_list" class="btn btn-success" download="1PreXYZ_Custom.conf" href=""
+				>download as .conf file</a
+			>
+			<div class="form-group">
+				<label>.conf</label>
+				<textarea class="form-control" id="bannedListConf" rows="6"></textarea>
+			</div>
+			<p>
+				store the .conf here: <br />
+				<b>C:\ProjectIgnis\repositories\lflists</b>
+			</p>
+		</div>
 	</div>
-	<button type="button" class="btn btn-success" onclick="sneakPeekConverterButton()">convert</button>
-	<a id="download_link_sneak" class="btn btn-success" download="2SneakCardPool.conf" href="">download as .conf file</a>
-	<div class="form-group">
-		<label>.conf</label>
-		<textarea class="form-control" id="sneakConf" rows="6"></textarea>
-	</div>
-	<p>
-		store the .conf here: <br />
-		<b>C:\ProjectIgnis\repositories\lflists</b>
-	</p>
 </div>
-<div class="jumbotron centerContainer">
-	<img src="/images/YuGiOh_Logo1.png" class="img-fluid" alt="image could not be loaded" />
-	<h1>important links</h1>
-	<ul>
-		<h3>
-			<li>
-				<a
-					target="_blank"
-					href="https://docs.google.com/spreadsheets/d/1NCD4u_KRdl6T0fOKFnFGOmMbWwV9U_HEFP6O4gS5jf8/edit#gid=1201840031"
-					>banned lists</a
-				>
-			</li>
-			<li>
-				<a target="_blank" href="https://discord.com/invite/ygopro-percy"
-					>deck builder and duel emulator (project ignis)</a
-				>
-			</li>
-			<li><a target="_blank" href="https://db.ygoprodeck.com/pack-open/">booster pack simulator (ygoprodeck)</a></li>
-			<li>
-				<a target="_blank" href="https://tsunamimats.com/pages/proxy"
-					>proxy image generator (tsunami mats)<br />5.96 x 8.61</a
-				>
-			</li>
-			<li>
-				<a target="_blank" href="https://github.com/Dejauxvue/YGOProxyGenerator"
-					>proxy .pdf generator (YGOProxyGenerator)<br />1,04 scale for DM printer - 30 margin</a
-				>
-			</li>
-			<li>
-				<a target="_blank" href="https://yugioh.fandom.com/wiki/Order_of_Set_Release#TCG">sneak peek release order</a>
-			</li>
-		</h3>
-	</ul>
-</div>
-<div class="jumbotron outerContainer">
-	<h1>banned list converter</h1>
-	<div class="form-group">
-		<label>google spreadsheets</label>
-		<textarea class="form-control" id="googleSpreadsheetsBannedList" rows="6"></textarea>
+<div class="container">
+	<div class="row">
+		<div class="col">blablablablablablablabla row 1 col 1</div>
+		<div class="col">blablablablablablablabla row 1 col 2</div>
 	</div>
-	<button type="button" class="btn btn-success" onclick="bannedListConverterButton()">convert</button>
-	<a id="download_link_banned_list" class="btn btn-success" download="1PreXYZ_Custom.conf" href="">download as .conf file</a>
-	<div class="form-group">
-		<label>.conf</label>
-		<textarea class="form-control" id="bannedListConf" rows="6"></textarea>
+	<div class="row">
+		<div class="col">blablablablablablablabla row 2 col 1</div>
 	</div>
-	<p>
-		store the .conf here: <br />
-		<b>C:\ProjectIgnis\repositories\lflists</b>
-	</p>
+
 </div>
+
 <script src="/javascript/Yu-Gi-Oh.js"></script>
