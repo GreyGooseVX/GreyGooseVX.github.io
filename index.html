@@ -6,6 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>GreyGooseVX</title>
 	<link rel="stylesheet" href="/css/bootstrapSlate.min.css" />
+	<link rel="manifest" href="/manifest.json">
+	<script>
+		//if browser support service worker
+		if('serviceWorker' in navigator) {
+		  navigator.serviceWorker.register('sw.js');
+		};
+	 </script>
 </head>
 
 <body>
