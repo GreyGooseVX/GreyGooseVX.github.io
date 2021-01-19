@@ -1,23 +1,29 @@
-function calculate() {
+function calculateButton() {
 	const startAmount = Number(document.getElementById("startAmount").value)
 	const monthlySavings = Number(document.getElementById("monthlySavings").value)
 	const yearlyInterest = Number(document.getElementById("yearlyInterest").value)
+	const monthlyInterestMultipler = Math.pow(yearlyInterest + 1, 1 / 12)
 	const yearsToBeConsidered = Number(document.getElementById("yearsToBeConsidered").value)
-	const interval = document.getElementById("interval").value
-   const monthsToBeConsidered = yearsToBeConsidered * 12
-   let currentMonth = 2
+	const monthsToBeConsidered = yearsToBeConsidered * 12
 
+	class Month {
+		constructor(currentMonth) {
+			if (currentMonth > 0) {
+				this.savingsAfterXMonths =
+					(months[currentMonth - 1].savingsAfterXMonths + monthlySavings) * monthlyInterestMultipler
+			} else {
+				this.savingsAfterXMonths = startAmount
+			}
+		}
+	}
 
-   class savingsRegister {
-      constructor(currentMonth) {
-        this.currentMonth = currentMonth;
-        this.savingsAtEndOfMonth = startAmount + monthlySavings * currentMonth;
-      }
-    }
-   let month1 = new savingsRegister (currentMonth)
-
-	/*for (let i = 1; i <= monthsToBeConsidered; i++) {
-		console.log(i)
-	}*/
-	document.getElementById("results").innerHTML = month1.savingsAtEndOfMonth
+	let months = []
+	for (let i = 0; i <= monthsToBeConsidered; i++) {
+		months[i] = new Month(i)
+	}
+	for (let i = 0; i <= monthsToBeConsidered; i++) {
+		console.log(`savings afer ${i} month(s) : `)
+		console.log(Math.round(months[i].savingsAfterXMonths))
+	}
+	document.getElementById("results").innerHTML = Math.round(months[monthsToBeConsidered].savingsAfterXMonths)
 }
