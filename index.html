@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GreyGooseVX</title>
+		<link rel="stylesheet" href="/css/bootstrapSlate.min.css" />
+		<link rel="manifest" href="/manifest.json" />
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>GreyGooseVX</title>
-	<link rel="stylesheet" href="/css/bootstrapSlate.min.css" />
-	<link rel="manifest" href="/manifest.json">
-	<script>
-		//if browser support service worker
-		if('serviceWorker' in navigator) {
-		  navigator.serviceWorker.register('sw.js');
-		};
-	 </script>
-</head>
-
-<body>
-	<div id="navbar"></div>
-	<div id="content"></div>
-	<div id="load libraries, navbar and content">
-		<script src="/jsLibraries/jquery-3.5.1.min.js"></script>
-		<script src="/jsLibraries/popper.min.js"></script>
-		<script src="/jsLibraries/bootstrap.min.js"></script>
-		<script src="/javascript/loadNavbar.js"></script>
-		<script src="/javascript/loadContent.js"></script>
-	</div>
-</body>
-
+	<body>
+		<div id="navbar"></div>
+		<div id="content"></div>
+		<div id="load libraries, navbar and content">
+			<script src="/jsLibraries/jquery-3.5.1.min.js"></script>
+			<script src="/jsLibraries/popper.min.js"></script>
+			<script src="/jsLibraries/bootstrap.min.js"></script>
+			<script src="/javascript/loadNavbar.js"></script>
+			<script src="/javascript/loadContent.js"></script>
+			<script>
+				navigator.serviceWorker.register("sw.js")
+			</script>
+		</div>
+	</body>
 </html>
