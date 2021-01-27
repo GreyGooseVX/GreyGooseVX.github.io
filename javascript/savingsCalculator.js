@@ -1,7 +1,6 @@
 document.getElementById("calculateOnSubmit").onsubmit = function (event) {
 	event.preventDefault()
 	calculateOnSubmit()
-	return false
 }
 
 function calculateOnSubmit() {
