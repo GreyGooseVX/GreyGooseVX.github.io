@@ -1,6 +1,7 @@
 document.getElementById("calculateOnSubmit").onsubmit = function (event) {
 	event.preventDefault()
 	calculateOnSubmit()
+	return false
 }
 
 function calculateOnSubmit() {
@@ -26,12 +27,10 @@ function calculateOnSubmit() {
 	for (let i = 0; i <= monthsToBeConsidered; i++) {
 		months[i] = new Month(i)
 	}
-	
+ 	document.getElementById("results").innerHTML=""
 	for (let i = 0; i <= monthsToBeConsidered; i++) {
 		let newLi = document.createElement("li")
 		newLi.innerHTML = `savings afer ${i} month(s) : ${Math.round(months[i].savingsAfterXMonths)}`
 		document.getElementById("results").appendChild(newLi)
 	}
-
-	// document.getElementById("results").innerHTML = Math.round(months[monthsToBeConsidered].savingsAfterXMonths)
 }
