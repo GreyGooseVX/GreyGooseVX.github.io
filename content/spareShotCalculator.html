@@ -1,15 +1,16 @@
 <div class="jumbotron">
-	<div class="form">
-		<label style="width:150px">magazineSize:</label>
+	<form class="form" id="calculateOnSubmit">
+		<label style="width: 150px">magazineSize:</label>
 		<input type="text" id="magazineSize" value="10" />
 		<br />
-		<label style="width:150px">spareShotProbability:</label>
+		<label style="width: 150px">spareShotProbability:</label>
 		<input type="text" id="spareShotProbability" value="0.2" />
 		<br />
-		<label style="width:150px">testRuns:</label>
+		<label style="width: 150px">testRuns:</label>
 		<input type="text" id="testRuns" value="100000" />
-	</div>
-	<button type="button" class="btn btn-success" onclick="runCode()">calculate</button>
+		<br />
+		<input type="submit" class="btn btn-success" value="calculate" />
+	</form>
 	<p id="result"></p>
 </div>
 <script src="/javascript/spareShotCalculator.js"></script>

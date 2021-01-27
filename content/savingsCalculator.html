@@ -1,5 +1,5 @@
 <div class="jumbotron">
-	<div class="form">
+	<form class="form" id="calculateOnSubmit">
 		<label style="width: 200px">start amount:</label>
 		<input type="text" id="startAmount" value="10000" />
 		<br />
@@ -10,9 +10,10 @@
 		<input type="text" id="yearlyInterest" value="0.06" />
 		<br />
 		<label style="width: 200px">years to be considered:</label>
-		<input type="text" id="yearsToBeConsidered" value="20" />
-	</div>
-	<button type="button" class="btn btn-success" onclick="calculateButton()">calculate</button>
+		<input type="text" id="yearsToBeConsidered" value="5" />
+		<br />
+		<input type="submit" class="btn btn-success"  value="calculate" />
+	</form>
 	<ul id="results"></ul>
 </div>
 <script src="/javascript/savingsCalculator.js"></script>

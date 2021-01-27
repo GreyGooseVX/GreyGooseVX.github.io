@@ -1,4 +1,9 @@
-function calculateButton() {
+document.getElementById("calculateOnSubmit").onsubmit = function (event) {
+	event.preventDefault()
+	calculateOnSubmit()
+}
+
+function calculateOnSubmit() {
 	const startAmount = Number(document.getElementById("startAmount").value)
 	const monthlySavings = Number(document.getElementById("monthlySavings").value)
 	const yearlyInterest = Number(document.getElementById("yearlyInterest").value)
@@ -21,9 +26,12 @@ function calculateButton() {
 	for (let i = 0; i <= monthsToBeConsidered; i++) {
 		months[i] = new Month(i)
 	}
+	
 	for (let i = 0; i <= monthsToBeConsidered; i++) {
-		console.log(`savings afer ${i} month(s) : `)
-		console.log(Math.round(months[i].savingsAfterXMonths))
+		let newLi = document.createElement("li")
+		newLi.innerHTML = `savings afer ${i} month(s) : ${Math.round(months[i].savingsAfterXMonths)}`
+		document.getElementById("results").appendChild(newLi)
 	}
-	document.getElementById("results").innerHTML = Math.round(months[monthsToBeConsidered].savingsAfterXMonths)
+
+	// document.getElementById("results").innerHTML = Math.round(months[monthsToBeConsidered].savingsAfterXMonths)
 }
