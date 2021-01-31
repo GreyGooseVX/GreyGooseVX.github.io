@@ -27,14 +27,15 @@ function calculateOnSubmit() {
 	for (let i = 0; i <= monthsToBeConsidered; i++) {
 		months[i] = new Month(i)
 	}
-	document.getElementById("results").innerHTML = ""
+	let results = document.getElementById("results")
+	results.innerHTML = ""
 	for (let i = 0; i <= monthsToBeConsidered; i += 6) {
 		let newLi = document.createElement("li")
 		newLi.innerHTML = `savings afer ${i / 12} year(s) : ${Math.round(months[i].savingsAfterXMonths)}`
-		document.getElementById("results").appendChild(newLi)
+		results.appendChild(newLi)
 
 		let newLi2 = document.createElement("li")
 		newLi2.innerHTML = `monthly interest afer ${i / 12} year(s) : ${Math.round(months[i].monthlyInterestAfterXMonths)}`
-		document.getElementById("results").appendChild(newLi2)
+		results.appendChild(newLi2)
 	}
 }
