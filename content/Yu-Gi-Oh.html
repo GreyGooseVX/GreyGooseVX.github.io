@@ -1,5 +1,24 @@
 <div class="container-fluid">
 	<div class="row">
+		<div class="col-md order-2 order-lg-1 jumbotron">
+			<h1>sneak peek converter</h1>
+			<div class="form-group">
+				<label>.ydk</label>
+				<textarea class="form-control" id="ydk" rows="6"></textarea>
+			</div>
+			<button type="button" class="btn btn-success" onclick="sneakPeekConverterButton()">convert</button>
+			<a id="download_link_sneak" class="btn btn-success" download="2SneakCardPool.conf" href=""
+				>download as .conf file</a
+			>
+			<div class="form-group">
+				<label>.conf</label>
+				<textarea class="form-control" id="sneakConf" rows="6"></textarea>
+			</div>
+			<p>
+				store the .conf here: <br />
+				<b>C:\ProjectIgnis\repositories\lflists</b>
+			</p>
+		</div>
 		<div class="col-lg-5 order-1 order-lg-2 jumbotron">
 			<img src="/images/YuGiOh_Logo1.png" class="img-fluid" alt="image could not be loaded" />
 			<h1>important links</h1>
@@ -37,25 +56,6 @@
 					</li>
 				</h3>
 			</ul>
-		</div>
-		<div class="col-md order-2 order-lg-1 jumbotron">
-			<h1>sneak peek converter</h1>
-			<div class="form-group">
-				<label>.ydk</label>
-				<textarea class="form-control" id="ydk" rows="6"></textarea>
-			</div>
-			<button type="button" class="btn btn-success" onclick="sneakPeekConverterButton()">convert</button>
-			<a id="download_link_sneak" class="btn btn-success" download="2SneakCardPool.conf" href=""
-				>download as .conf file</a
-			>
-			<div class="form-group">
-				<label>.conf</label>
-				<textarea class="form-control" id="sneakConf" rows="6"></textarea>
-			</div>
-			<p>
-				store the .conf here: <br />
-				<b>C:\ProjectIgnis\repositories\lflists</b>
-			</p>
 		</div>
 		<div class="col-md order-3 order-lg-3 jumbotron">
 			<h1>banned list converter</h1>
