@@ -1,4 +1,4 @@
-document.getElementById("calculateOnSubmit").onsubmit = function (event) {
+document.getElementById("calculateOnSubmit").onsubmit = (event) => {
 	event.preventDefault()
 	calculateOnSubmit()
 }
