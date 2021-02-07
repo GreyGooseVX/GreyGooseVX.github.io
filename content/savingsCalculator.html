@@ -1,21 +1,19 @@
 <div class="jumbotron">
-	<div class="mx-auto">
-		<form class="form" id="calculateOnSubmit">
-			<label style="width: 200px">start amount:</label>
-			<input type="text" id="startAmount" value="10000" />
-			<br />
-			<label style="width: 200px">monthly savings:</label>
-			<input type="text" id="monthlySavings" value="500" />
-			<br />
-			<label style="width: 200px">yearlyInterest:</label>
-			<input type="text" id="yearlyInterest" value="0.07" />
-			<br />
-			<label style="width: 200px">years to be considered:</label>
-			<input type="text" id="yearsToBeConsidered" value="10" />
-			<br />
-			<input type="submit" class="btn btn-success" value="calculate" />
-		</form>
-		<ul id="results"></ul>
-	</div>
+	<form id="calculateOnSubmit">
+		<label style="width: 200px">start amount:</label>
+		<input type="text" id="startAmount" value="10000" />
+		<br />
+		<label style="width: 200px">monthly savings:</label>
+		<input type="text" id="monthlySavings" value="500" />
+		<br />
+		<label style="width: 200px">yearlyInterest:</label>
+		<input type="text" id="yearlyInterest" value="0.07" />
+		<br />
+		<label style="width: 200px">years to be considered:</label>
+		<input type="text" id="yearsToBeConsidered" value="10" />
+		<br />
+		<input type="submit" class="btn btn-success" value="calculate" />
+	</form>
+	<ul id="results"></ul>
 </div>
 <script src="/javascript/savingsCalculator.js"></script>
