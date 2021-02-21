@@ -10,6 +10,7 @@ function calculateOnSubmit() {
 	const monthlyInterestMultipler = Math.pow(yearlyInterest + 1, 1 / 12)
 	const yearsToBeConsidered = Number(document.getElementById("yearsToBeConsidered").value)
 	const monthsToBeConsidered = yearsToBeConsidered * 12
+	const outputInterval = Number(document.getElementById("outputInterval").value)
 
 	class Month {
 		constructor(currentMonth) {
@@ -29,7 +30,7 @@ function calculateOnSubmit() {
 	}
 	let results = document.getElementById("results")
 	results.innerHTML = ""
-	for (let i = 0; i <= monthsToBeConsidered; i += 6) {
+	for (let i = 0; i <= monthsToBeConsidered; i += outputInterval) {
 		let newLi = document.createElement("div")
 		newLi.className += "list-group-item list-group-item-action"
 		newLi.innerHTML = `savings afer ${i / 12} year(s) : ${Math.round(months[i].savingsAfterXMonths)}
