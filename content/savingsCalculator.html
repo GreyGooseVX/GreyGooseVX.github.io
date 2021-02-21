@@ -1,30 +1,38 @@
 <div style="zoom: 150%" class="jumbotron container-fluid">
 	<form id="calculateOnSubmit">
 		<div class="row">
-			<label class="col-2">start amount:</label>
-			<input class="col-3" type="text" id="startAmount" value="10000" />
+			<label class="col-lg-2">start amount:</label>
+			<div class="col">
+				<input class="col-lg-3" type="text" id="startAmount" value="10000" />
+			</div>
 		</div>
 		<div class="row">
-			<label class="col-2">monthly savings:</label>
-			<input class="col-3" type="text" id="monthlySavings" value="500" />
+			<label class="col-lg-2">monthly savings:</label>
+			<div class="col">
+				<input class="col-lg-3" type="text" id="monthlySavings" value="500" />
+			</div>
 		</div>
 		<div class="row">
-			<label class="col-2">yearly interest:</label>
-			<input class="col-3" type="text" id="yearlyInterest" value="0.07" />
+			<label class="col-lg-2">yearly interest:</label>
+			<div class="col">
+				<input class="col-lg-3" type="text" id="yearlyInterest" value="0.07" />
+			</div>
 		</div>
 		<div class="row">
-			<label class="col-2">years to be considered:</label>
-			<input class="col-3" type="text" id="yearsToBeConsidered" value="10" />
+			<label class="col-lg-2">years to be considered:</label>
+			<div class="col">
+				<input class="col-lg-3" type="text" id="yearsToBeConsidered" value="10" />
+			</div>
 		</div>
 		<div class="row">
-			<div class="col-2">
+			<div class="col-lg-2">
 				<input type="submit" class="btn btn-success" value="calculate" />
 			</div>
 		</div>
 	</form>
 	<br />
 	<div class="row">
-		<div class="col-5">
+		<div class="col-lg-5">
 			<ul id="results" class="list-group"></ul>
 		</div>
 	</div>
