@@ -36,14 +36,4 @@ function calculateOnSubmit() {
 		<br> monthly interest afer ${i / 12} year(s) : ${Math.round(months[i].monthlyInterestAfterXMonths)}`
 		results.appendChild(newLi)
 	}
-
-	// for (let i = 0; i <= monthsToBeConsidered; i += 6) {
-	// 	let newLi = document.createElement("li")
-	// 	newLi.innerHTML = `savings afer ${i / 12} year(s) : ${Math.round(months[i].savingsAfterXMonths)}`
-	// 	results.appendChild(newLi)
-
-	// 	let newLi2 = document.createElement("li")
-	// 	newLi2.innerHTML = `monthly interest afer ${i / 12} year(s) : ${Math.round(months[i].monthlyInterestAfterXMonths)}`
-	// 	results.appendChild(newLi2)
-	// }
 }

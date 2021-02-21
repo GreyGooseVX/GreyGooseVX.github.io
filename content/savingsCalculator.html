@@ -1,24 +1,32 @@
-<div class="jumbotron container-fluid">
-	<div class="row">
-		<form id="calculateOnSubmit">
-			<label style="width: 200px">start amount:</label>
-			<input type="text" id="startAmount" value="10000" />
-			<br />
-			<label style="width: 200px">monthly savings:</label>
-			<input type="text" id="monthlySavings" value="500" />
-			<br />
-			<label style="width: 200px">yearlyInterest:</label>
-			<input type="text" id="yearlyInterest" value="0.07" />
-			<br />
-			<label style="width: 200px">years to be considered:</label>
-			<input type="text" id="yearsToBeConsidered" value="10" />
-			<br />
-			<input type="submit" class="btn btn-success" value="calculate" />
-		</form>
-	</div>
+<div style="zoom: 150%" class="jumbotron container-fluid">
+	<form id="calculateOnSubmit">
+		<div class="row">
+			<label class="col-2">start amount:</label>
+			<input class="col-3" type="text" id="startAmount" value="10000" />
+		</div>
+		<div class="row">
+			<label class="col-2">monthly savings:</label>
+			<input class="col-3" type="text" id="monthlySavings" value="500" />
+		</div>
+		<div class="row">
+			<label class="col-2">yearly interest:</label>
+			<input class="col-3" type="text" id="yearlyInterest" value="0.07" />
+		</div>
+		<div class="row">
+			<label class="col-2">years to be considered:</label>
+			<input class="col-3" type="text" id="yearsToBeConsidered" value="10" />
+		</div>
+		<div class="row">
+			<div class="col-2">
+				<input type="submit" class="btn btn-success" value="calculate" />
+			</div>
+		</div>
+	</form>
 	<br />
 	<div class="row">
-		<ul id="results" class="list-group"></ul>
+		<div class="col-5">
+			<ul id="results" class="list-group"></ul>
+		</div>
 	</div>
 </div>
 <script src="/javascript/savingsCalculator.js"></script>
