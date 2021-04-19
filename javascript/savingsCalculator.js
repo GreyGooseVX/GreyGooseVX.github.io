@@ -33,8 +33,8 @@ function calculateOnSubmit() {
 	for (let i = 0; i <= monthsToBeConsidered; i += outputInterval) {
 		let newLi = document.createElement("div")
 		newLi.className += "list-group-item list-group-item-action"
-		newLi.innerHTML = `savings afer ${i / 12} year(s) : ${Math.round(months[i].savingsAfterXMonths)}
-		<br> monthly interest afer ${i / 12} year(s) : ${Math.round(months[i].monthlyInterestAfterXMonths)}`
+		newLi.innerHTML = `savings after ${i / 12} year(s) : ${Math.round(months[i].savingsAfterXMonths)}
+		<br> monthly interest after ${i / 12} year(s) : ${Math.round(months[i].monthlyInterestAfterXMonths)}`
 		results.appendChild(newLi)
 	}
 }
