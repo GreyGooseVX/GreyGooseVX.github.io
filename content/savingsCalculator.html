@@ -13,13 +13,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<label class="col-md-4 col-lg-2">yearly interest*:</label>
+			<label class="col-md-4 col-lg-2">yearly returns*:</label>
 			<div class="col">
-				<input class="col-md-3" type="text" id="yearlyInterest" value="0.1133" />
+				<input class="col-md-3" type="text" id="yearlyReturns" value="0.1133" />
 			</div>
 		</div>
 		<div class="row">
-			<label class="col-md-4 col-lg-2">yearly inflation*:</label>
+			<label class="col-md-4 col-lg-2">yearly inflation**:</label>
 			<div class="col">
 				<input class="col-md-3" type="text" id="yearlyInflation" value="0.0387" />
 			</div>
@@ -52,6 +52,13 @@
 			<ul id="results" class="list-group"></ul>
 		</div>
 	</div>
-	
+	<div class="row">
+		<div class="col-lg-5">
+			<a href="https://en.wikipedia.org/wiki/MSCI_World">* Default is based on MSCI World (USD) returns 1970-2020</a>
+			<br>
+			<a href="https://www.in2013dollars.com/us/inflation/1970?endYear=2020&amount=1">** Default is based on USD
+				inflation 1970-2020</a>
+		</div>
+	</div>
 </div>
 <script src="/javascript/savingsCalculator.js"></script>
