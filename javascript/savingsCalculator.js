@@ -6,8 +6,9 @@ document.getElementById("calculateOnSubmit").onsubmit = (event) => {
 function calculateOnSubmit() {
 	const startAmount = Number(document.getElementById("startAmount").value)
 	const monthlySavings = Number(document.getElementById("monthlySavings").value)
-	const yearlyInterest = Number(document.getElementById("yearlyInterest").value)
-	const monthlyInterestMultipler = Math.pow(yearlyInterest + 1, 1 / 12)
+	const effectiveYearlyInterest =
+		Number(document.getElementById("yearlyInterest").value) - Number(document.getElementById("yearlyInflation").value)
+	const monthlyInterestMultipler = Math.pow(effectiveYearlyInterest + 1, 1 / 12)
 	const yearsToBeConsidered = Number(document.getElementById("yearsToBeConsidered").value)
 	const monthsToBeConsidered = yearsToBeConsidered * 12
 	const outputInterval = Number(document.getElementById("outputInterval").value)
@@ -30,6 +31,10 @@ function calculateOnSubmit() {
 	}
 	let results = document.getElementById("results")
 	results.innerHTML = ""
+	let newLi = document.createElement("div")
+	newLi.className += "list-group-item list-group-item-action"
+	newLi.innerHTML = `effective yearly interest : ${effectiveYearlyInterest}`
+	results.appendChild(newLi)
 	for (let i = 0; i <= monthsToBeConsidered; i += outputInterval) {
 		let newLi = document.createElement("div")
 		newLi.className += "list-group-item list-group-item-action"
